@@ -23,7 +23,8 @@ def cpu():
 
 @app.route('/')
 def home():
-   return render_template('index.html') 
+   s = datetime.datetime.now().strftime("%s")
+   return render_template('index.html', timestamp=s)
 
 
 if __name__ == '__main__':
