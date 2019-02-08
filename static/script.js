@@ -19,25 +19,25 @@ Highcharts.chart('chart', {
                 if (py < series.yAxis.oldMin | !series.yAxis.oldMin) {
                     series.yAxis.update({min: py});
                 }
-                series.addPoint([x, py], true, true);
+                series.addPoint([x, ty], true, true);
               });
           }, 3000);
         } 
       }
     },
     title: {
-      text: 'Pressure'
+      text: 'Templerature'
     },
     xAxis: {
       type: 'datetime'
     },
     yAxis: {
       title: {
-        text: 'hPa' 
+        text: '℃' 
       }
     },
     series: [{
-      name: 'Pressure',
+      name: 'Templerature',
       data: (function () {
         let data = [],
             time = (new Date()).getTime(),
